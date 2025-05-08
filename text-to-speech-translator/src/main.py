@@ -14,7 +14,7 @@ async def main():
     print("Opciones de idioma:")
     for lang in LANGUAGE_CODES.keys():
         print(f"- {lang}")
-
+    # convertir a minúsculas para comparar con el diccionario
     source_lang = input("Introduce idioma de origen: ").strip().lower()
     target_lang = input("Introduce idioma para traducir: ").strip().lower()
     
@@ -38,13 +38,13 @@ async def main():
 
     print(f"Texto extraído: {text}")
 
-    # Traducir el texto
+    # Traducir el texto 
     translator = Translator()
     translated_text = await translator.translate_text(LANGUAGE_CODES[source_lang], LANGUAGE_CODES[target_lang], text)
 
     print(f"Translated text: {translated_text}")
 
-    # Convertir a TTS
+    # Convertir a TTS y reproducir
     tts = TextToSpeech()
     tts.speak(translated_text, LANGUAGE_CODES[target_lang])
 
