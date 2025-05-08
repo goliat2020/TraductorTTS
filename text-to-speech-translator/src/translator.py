@@ -1,0 +1,10 @@
+from googletrans import Translator as GoogleTranslator
+
+class Translator:
+    def __init__(self):
+        self.translator = GoogleTranslator()
+
+    async def translate_text(self, source_lang, target_lang, text):
+        # Llama al método translate de forma sincrónica
+        result = await self.translator.translate(text, src=source_lang, dest=target_lang)
+        return result.text
