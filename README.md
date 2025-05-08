@@ -8,6 +8,7 @@ This project is a simple console application that translates text from one langu
 text-to-speech-translator
 ├── src
 │   ├── main.py
+|   ├── ocr.py
 │   ├── translator.py
 │   ├── text_to_speech.py
 │   └── utils

@@ -5,6 +5,7 @@ import asyncio
 from translator import Translator
 from text_to_speech import TextToSpeech
 from utils.language_codes import LANGUAGE_CODES
+from ocr import extraer_texto_de_imagen
 
 async def main():
     print("Welcome to the Text-to-Speech Translator!")
