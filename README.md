@@ -1,6 +1,25 @@
-# Text-to-Speech Translator
+# Traductor TTS con detección de texto en imágenes utilizando OCR
 
-This project is a simple console application that translates text from one language to another and converts the translated text into speech. It allows users to select the source and target languages for translation.
+Este proyecto permite traducir texto extraído de imágenes a diferentes idiomas y convertirlo en audio utilizando Python.
+
+## Características
+- Extrae texto de imágenes utilizando `easyocr`.
+- Traduce el texto extraído a diferentes idiomas utilizando `googletrans`.
+- Convierte el texto traducido en audio utilizando `gTTS` y lo reproduce con `pygame`.
+
+## Requisitos
+Asegúrate de tener instalado Python 3.8 o superior.
+
+## Instalación
+Sigue estos pasos para instalar las dependencias necesarias:
+
+1. Clona este repositorio o descarga los archivos.
+2. Abre una terminal en la carpeta raíz del proyecto.
+3. Instala las dependencias ejecutando el siguiente comando:
+
+   ```bash
+   pip install googletrans==4.0.0-rc1 gTTS==2.2.3 pygame==2.5.0 easyocr==1.7.0
+   ```
 
 ## Project Structure
 
@@ -10,41 +29,26 @@ text-to-speech-translator
 │   ├── main.py
 │   ├── translator.py
 │   ├── text_to_speech.py
+│   ├── ocr.py
 │   └── utils
 │       └── language_codes.py
-├── requirements.txt
 └── README.md
 ```
 
-## Installation
+## Ejecución
 
-To set up the project, you need to install the required dependencies. You can do this by running:
+1. Ejecuta la aplicación:
 
-```
-pip install -r requirements.txt
-```
+   ```bash
+   python src/main.py
+   ```
 
-## Usage
+2. Sigue las instrucciones para cargar una imagen, seleccionar el idioma de origen y el idioma de destino.
 
-1. Run the application:
+3. La aplicación mostrará el texto traducido y reproducirá el audio del texto traducido.
 
-```
-python src/main.py
-```
+## Funcionalidad
 
-2. Follow the prompts to enter the source language, target language, and the text you want to translate.
-
-3. The application will display the translated text and play the audio of the translated text.
-
-## Functionality
-
-- **Translation**: The application uses an external translation API to translate text from the source language to the target language.
-- **Text-to-Speech**: The translated text is converted into speech using a text-to-speech library.
-
-## Contributing
-
-If you would like to contribute to this project, feel free to submit a pull request or open an issue for discussion.
-
-## License
-
-This project is licensed under the MIT License.
+- **OCR (Reconocimiento Óptico de Caracteres)**: Extrae texto de imágenes utilizando `easyocr`.
+- **Translation**: Traduce el texto extraído a diferentes idiomas utilizando `googletrans`.
+- **Text-to-Speech**: Convierte el texto traducido en audio utilizando `gTTS` y lo reproduce con `pygame`.
