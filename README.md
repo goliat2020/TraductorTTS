@@ -27,6 +27,7 @@ Sigue estos pasos para instalar las dependencias necesarias:
 text-to-speech-translator
 ├── src
 │   ├── main.py
+|   ├── ocr.py
 │   ├── translator.py
 │   ├── text_to_speech.py
 │   ├── ocr.py
